@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemySpawner : MonoBehaviour {
 
-	float spawnCD = 0.25f;
+	float spawnCD = 0.5f;
 	float spawnCDremaining = 5;
 
 	[System.Serializable]
@@ -15,11 +15,6 @@ public class EnemySpawner : MonoBehaviour {
 	}
 
 	public WaveComponent[] waveComps;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
 	
 	// Update is called once per frame
 	void Update () {

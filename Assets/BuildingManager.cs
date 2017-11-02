@@ -1,21 +1,38 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class BuildingManager : MonoBehaviour {
 
 	public GameObject selectedTower;
+	
+	public Text nameText;
+	public Text damageText;
+	public Text rangeText;
+	public Text costText;
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
 	}
 
 	public void SelectTowerType(GameObject prefab) {
 		selectedTower = prefab;
+		
+		
+		nameText.text 	= 			   selectedTower.name;
+		
+		if(prefab.gameObject.tag == "Tower"){
+			damageText.text = "Damage: " + selectedTower.GetComponent<Tower>().damage.ToString();
+			rangeText.text 	= "Range: "  + selectedTower.GetComponent<Tower>().range.ToString();
+			costText.text 	= "Cost: " 	 + selectedTower.GetComponent<Tower>().cost.ToString();
+		}
+		else if(prefab.gameObject.tag == "Floor"){
+			
+		}
+		
 	}
 }

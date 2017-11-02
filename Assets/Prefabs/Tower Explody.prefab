@@ -24,9 +24,10 @@ GameObject:
   m_Component:
   - component: {fileID: 435980}
   - component: {fileID: 11470182}
+  - component: {fileID: 33908077923761336}
   m_Layer: 0
   m_Name: Tower Explody
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -216,8 +217,8 @@ MonoBehaviour:
   range: 10
   bulletPrefab: {fileID: 174540, guid: 644f577d9c48a0b4e98c11774b6aa9c0, type: 2}
   cost: 10
-  damage: 50
-  radius: 5
+  damage: 2
+  radius: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -241,3 +242,10 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 130268}
   m_IsPrefabParent: 1
+--- !u!33 &33908077923761336
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130268}
+  m_Mesh: {fileID: 0}

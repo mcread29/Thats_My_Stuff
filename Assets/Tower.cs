@@ -14,7 +14,7 @@ public class Tower : MonoBehaviour {
 	float fireCooldownLeft = 0;
 
 	public float damage = 1;
-	public float radius = 0;
+	public float radius = 5;
 
 	// Use this for initialization
 	void Start () {
@@ -66,4 +66,6 @@ public class Tower : MonoBehaviour {
 		b.damage = damage;
 		b.radius = radius;
 	}
+	
+	
 }

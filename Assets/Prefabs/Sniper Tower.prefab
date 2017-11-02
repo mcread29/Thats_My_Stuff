@@ -24,9 +24,10 @@ GameObject:
   m_Component:
   - component: {fileID: 435980}
   - component: {fileID: 11470182}
+  - component: {fileID: 33750209066293358}
   m_Layer: 0
   m_Name: Sniper Tower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,3 +234,10 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 130268}
   m_IsPrefabParent: 1
+--- !u!33 &33750209066293358
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130268}
+  m_Mesh: {fileID: 0}
