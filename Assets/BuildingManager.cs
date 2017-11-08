@@ -31,7 +31,9 @@ public class BuildingManager : MonoBehaviour {
 			costText.text 	= "Cost: " 	 + selectedTower.GetComponent<Tower>().cost.ToString();
 		}
 		else if(prefab.gameObject.tag == "Floor"){
-			
+			damageText.text = "Damage: " + selectedTower.GetComponent<Floor>().damage.ToString();
+			rangeText.text 	= "Range: "  + selectedTower.GetComponent<Floor>().range.ToString();
+			costText.text 	= "Cost: " 	 + selectedTower.GetComponent<Floor>().cost.ToString();
 		}
 		
 	}
