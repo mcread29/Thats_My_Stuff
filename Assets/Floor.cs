@@ -34,7 +34,7 @@ public class Floor : MonoBehaviour {
 			return;
 		}
 		if (fireCooldown <= 0) {
-			Destroy (other.gameObject);
+			other.GetComponent<Enemy>().Die();
 			fireCooldown = 100;
 			rend.material.color = Color.blue;
 		} 
