@@ -2,6 +2,12 @@
 using System.Collections;
 
 public class TowerSpot : MonoBehaviour {
+	
+	public CanvasGroup infoTab;
+	
+	void Start(){
+		infoTab = FindObjectOfType<CanvasGroup>();
+	}
 
 	void OnMouseUp() {
 		Debug.Log("TowerSpot clicked.");
@@ -19,6 +25,9 @@ public class TowerSpot : MonoBehaviour {
 			// FIXME: Right now we assume that we're an object nested in a parent.
 			Instantiate(bm.selectedTower, transform.parent.position, transform.parent.rotation);
 			Destroy(transform.parent.gameObject);
+			
+			infoTab.alpha = 0f;
+			
 		}
 	}
 

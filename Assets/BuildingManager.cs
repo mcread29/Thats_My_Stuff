@@ -10,9 +10,12 @@ public class BuildingManager : MonoBehaviour {
 	public Text damageText;
 	public Text rangeText;
 	public Text costText;
+	
+	public CanvasGroup infoTab;
 
 	// Use this for initialization
 	void Start () {
+		infoTab = FindObjectOfType<CanvasGroup>();
 	}
 	
 	// Update is called once per frame
@@ -22,6 +25,7 @@ public class BuildingManager : MonoBehaviour {
 	public void SelectTowerType(GameObject prefab) {
 		selectedTower = prefab;
 		
+		infoTab.alpha = 1f;
 		
 		nameText.text 	= 			   selectedTower.name;
 		
@@ -35,6 +39,8 @@ public class BuildingManager : MonoBehaviour {
 			rangeText.text 	= "Range: "  + selectedTower.GetComponent<Floor>().range.ToString();
 			costText.text 	= "Cost: " 	 + selectedTower.GetComponent<Floor>().cost.ToString();
 		}
+		
+		
 		
 	}
 }

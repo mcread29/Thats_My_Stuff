@@ -4,6 +4,7 @@ using System.Collections;
 public class EnemySpawner : MonoBehaviour {
 
 	float spawnCD = 0.5f;
+	float initialSpawnCDremaining = 2;
 	float spawnCDremaining = 5;
 
 	[System.Serializable]
@@ -18,9 +19,9 @@ public class EnemySpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		spawnCDremaining -= Time.deltaTime;
-		if(spawnCDremaining < 0) {
-			spawnCDremaining = spawnCD;
+		initialSpawnCDremaining -= Time.deltaTime;
+		if(initialSpawnCDremaining < 0) {
+			initialSpawnCDremaining = spawnCD;
 
 			bool didSpawn = false;
 
@@ -41,6 +42,7 @@ public class EnemySpawner : MonoBehaviour {
 				// TODO: Instantiate next wave object!
 
 				if(transform.parent.childCount > 1) {
+					initialSpawnCDremaining = spawnCDremaining;
 					transform.parent.GetChild(1).gameObject.SetActive(true);
 				}
 				else {
