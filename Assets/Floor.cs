@@ -30,14 +30,11 @@ public class Floor : MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider other){
-		if(other.gameObject.tag == "PathNode"){
-			return;
-		}
-		if (fireCooldown <= 0) {
+		if(other.gameObject.tag == "Enemy" && fireCooldown <= 0){
 			other.GetComponent<Enemy>().Die();
 			fireCooldown = 100;
 			rend.material.color = Color.blue;
-		} 
+		}
 	}
 	
 }

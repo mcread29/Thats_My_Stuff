@@ -42,6 +42,7 @@ public class Enemy : MonoBehaviour {
 		}
 
 		Vector3 dir = targetPathNode.position - this.transform.localPosition;
+		dir.y += 1;
 
 		float distThisFrame = speed * Time.deltaTime;
 
