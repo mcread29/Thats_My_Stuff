@@ -8,6 +8,8 @@ TagManager:
   - Floor
   - PathNode
   - Bullet
+  - Enemy
+  - Arrow Tower
   layers:
   - Default
   - TransparentFX
