@@ -25,27 +25,27 @@ public class BuildingManager : MonoBehaviour {
 		//TODO: Make arrow tower rotate
 		//		Make holoTower transparent
 		//		Make new prefabs with no scripts
-		Vector3 mousepos = Input.mousePosition;
-		mousepos.z = 17;
-		if(selectedTower != null){
-			if(holoTower == null){
-				holoTower = Instantiate(selectedTower, Camera.main.ScreenToWorldPoint(mousepos), selectedTower.transform.rotation);
-			}
-			else{
-				holoTower.transform.position = Vector3.Lerp(holoTower.transform.position, Camera.main.ScreenToWorldPoint(mousepos), 1);
-			}
-		}
-		if(Input.GetButtonDown("Fire1")){
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			RaycastHit[] hits;
-			hits = Physics.RaycastAll(Camera.main.ScreenToWorldPoint(mousepos), Vector3.down);
-			foreach(RaycastHit hit in hits){
-				Debug.Log(hit.transform.gameObject.tag);
-			}
-			// for(int i = 0; i < hits.length; i++){
-			// 	Debug.Log(hits[i].transform.gameObject.tag);
-			// }
-		}
+		// Vector3 mousepos = Input.mousePosition;
+		// mousepos.z = 17;
+		// if(selectedTower != null){
+		// 	if(holoTower == null){
+		// 		holoTower = Instantiate(selectedTower, Camera.main.ScreenToWorldPoint(mousepos), selectedTower.transform.rotation);
+		// 	}
+		// 	else{
+		// 		holoTower.transform.position = Vector3.Lerp(holoTower.transform.position, Camera.main.ScreenToWorldPoint(mousepos), 1);
+		// 	}
+		// }
+		// if(Input.GetButtonDown("Fire1")){
+		// 	Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		// 	RaycastHit[] hits;
+		// 	hits = Physics.RaycastAll(Camera.main.ScreenToWorldPoint(mousepos), Vector3.down);
+		// 	foreach(RaycastHit hit in hits){
+		// 		Debug.Log(hit.transform.gameObject.tag);
+		// 	}
+		// 	// for(int i = 0; i < hits.length; i++){
+		// 	// 	Debug.Log(hits[i].transform.gameObject.tag);
+		// 	// }
+		// }
 	}
 
 	public void SelectTowerType(GameObject prefab) {
