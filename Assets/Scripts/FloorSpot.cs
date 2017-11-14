@@ -27,6 +27,7 @@ public class FloorSpot : MonoBehaviour {
 			Destroy(transform.parent.gameObject);
 			
 			infoTab.alpha = 0f;
+			bm.selectedTower = null;
 		}
 	}
 

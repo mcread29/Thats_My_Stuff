@@ -44,6 +44,7 @@ public class TowerSpot : MonoBehaviour {
 				
 				infoTab.alpha = 0f;
 			}
+			bm.selectedTower = null;
 		}
 	}
 
