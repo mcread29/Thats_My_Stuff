@@ -50,7 +50,7 @@ public class BuildingManager : MonoBehaviour {
 
 	public void SelectTowerType(GameObject prefab) {
 		selectedTower = prefab;
-		Destroy(holoTower.gameObject);
+		//Destroy(holoTower.gameObject);
 		holoTower = null;
 		
 		infoTab.alpha = 1f;
