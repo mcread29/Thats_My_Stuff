@@ -10,6 +10,9 @@ TagManager:
   - Bullet
   - Enemy
   - Arrow Tower
+  - TowerSpot
+  - FloorSpot
+  - Ground
   layers:
   - Default
   - TransparentFX
