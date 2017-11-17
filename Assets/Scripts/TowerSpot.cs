@@ -9,7 +9,7 @@ public class TowerSpot : MonoBehaviour {
 		infoTab = FindObjectOfType<CanvasGroup>();
 	}
 
-	void OnMouseUp() {
+	public void ClickedTowerSpot() {
 		Debug.Log("TowerSpot clicked.");
 
 		BuildingManager bm = GameObject.FindObjectOfType<BuildingManager>();
